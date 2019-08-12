@@ -1,0 +1,22 @@
+{
+  "name": "zp-webpack",
+  "version": "1.0.0",
+  "description": "self 自己的打包库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "zp-webpack": "./bin/zp-webpack.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marspal/zp-webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marspal/zp-webpack/issues"
+  },
+  "homepage": "https://github.com/marspal/zp-webpack#readme"
+}
