@@ -18,5 +18,15 @@
   "bugs": {
     "url": "https://github.com/marspal/zp-webpack/issues"
   },
-  "homepage": "https://github.com/marspal/zp-webpack#readme"
+  "homepage": "https://github.com/marspal/zp-webpack#readme",
+  "devDependencies": {
+    "@babel/generator": "^7.5.5",
+    "@babel/traverse": "^7.5.5",
+    "@babel/types": "^7.5.5",
+    "babylon": "^6.18.0",
+    "ejs": "^2.6.2",
+    "escodegen": "^1.12.0",
+    "esprima": "^4.0.1",
+    "estraverse": "^4.2.0"
+  }
 }

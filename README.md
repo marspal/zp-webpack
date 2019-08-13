@@ -32,4 +32,13 @@
 
 2. webpack分析及处理
 
+3. 创建依赖关系
+
+4. AST
+
+  babylon 源码转化成AST
+  @babel/types 替换
+  @babel/generator 重新生成
+  @babel/traverse 遍历AST
+
 
