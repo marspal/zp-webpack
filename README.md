@@ -41,4 +41,68 @@
   @babel/generator 重新生成
   @babel/traverse 遍历AST
 
+5. loaders
+
+- less-loader
+
+```js
+  let less = require("less");
+  function loader(source){
+    let css = "";
+    less.render(source, function(err, c){
+      console.error(err);
+      if(!err) css = c.css;
+    })
+    return css;
+  }
+  module.exports = loader;
+```
+
+- style-loader
+
+```js
+  function loader(source){
+    let style = `
+      let style = document.createElement('style');
+      style.innerHTML=${JSON.stringify(source)}
+      document.head.appendChild(style)
+    `;
+    return style;
+  } 
+  module.exports = loader;
+```
+
+6. 增加plugins
+
+- 新增hooks 使用tapable, npm i tapable -D
+
+```js
+// 如果传递了插件
+let plugins = this.config.plugins;
+if(Array.isArray(plugins)){
+  plugins.forEach(plugin => {
+    plugin.apply(this)
+  })
+}
+```
+
+```js
+class P {
+  apply(compiler){
+    compiler.hooks.emit.tap('p', function(){
+      console.log("emit")
+    })
+  }
+}
+class P1 {
+  apply(compiler){
+    compiler.hooks.afterPlugins.tap('p1', function(){
+      console.log("afterPlugins")
+    })
+  }
+}
+```
+
+
+
 

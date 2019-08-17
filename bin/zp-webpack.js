@@ -6,6 +6,7 @@ const path = require("path");
 const config = require(path.resolve(process.cwd(), 'webpack.config.js'));
 const Compiler = require("../lib/compiler.js");
 const compiler = new Compiler(config);
+compiler.hooks.entryOptions.call()
 
 // 标识运行编译
 compiler.run();
